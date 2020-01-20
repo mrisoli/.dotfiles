@@ -14,6 +14,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'rking/ag.vim'
 Plug 'kien/ctrlp.vim'
+Plug 'janko/vim-test'
 
 Plug 'mattn/emmet-vim'
 
@@ -21,12 +22,19 @@ Plug 'w0rp/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'leafgarland/typescript-vim'
-
+Plug 'peitalin/vim-jsx-typescript'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
-Plug 'wakatime/vim-wakatime'
+Plug 'neovimhaskell/haskell-vim'
 
-Plug 'mxw/vim-jsx'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+Plug 'ElmCast/elm-vim'
+Plug 'andys8/vim-elm-syntax'
+
+Plug 'elixir-editors/vim-elixir'
+
+Plug 'wakatime/vim-wakatime'
 
 Plug 'arcticicestudio/nord-vim'
 
@@ -67,11 +75,17 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" Move to the next buffer
+nmap <leader>l :bnext<CR>
+"
+" Move to the previous buffer
+nmap <leader>h :bprevious<CR>
+
 ""--------
 "" airline
 ""--------
 
-let g:airline_theme='wombat'
+let g:airline_theme='nord'
 let g:airline#extensions#tabline#enabled = 1
 
 ""--------
@@ -138,6 +152,21 @@ set rtp+=~/.fzf
 ""--------
 "" fzf
 ""--------
+
+""--------
+"" test
+""--------
+
+nmap <silent> t<C-n> :TestNearest<CR>
+nmap <silent> t<C-f> :TestFile<CR>
+nmap <silent> t<C-s> :TestSuite<CR>
+nmap <silent> t<C-l> :TestLast<CR>
+nmap <silent> t<C-g> :TestVisit<CR>
+
+""--------
+"" test
+""--------
+
 map <C-e> :redir @+<CR>:1messages<CR>:redir END<CR>
 
 

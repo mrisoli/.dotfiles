@@ -61,6 +61,9 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 export PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig
 
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
