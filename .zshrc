@@ -14,7 +14,7 @@ ZSH_THEME="awesomepanda"
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
 
-plugins=(git zsh-iterm-touchbar)
+plugins=(git)
 
 export LC_ALL=en_US.UTF-8
 
@@ -54,19 +54,38 @@ export EDITOR='vim'
 
 alias rg="rg --smart-case"
 
+alias ctags="`brew --prefix`/bin/ctags"
+
+alias v='f -e vim' # quick opening files with vim
+alias n='nvim'
+
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export FZF_DEFAULT_COMMAND='ag -g ""'
+export FZF_DEFAULT_COMMAND="rg --files --hidden"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 export PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig
 
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="/Users/marcelorisoli/local/bin:$PATH"
+
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-eval $(thefuck --alias f)
+eval $(thefuck --alias F)
+eval "$(fasd --init posix-alias zsh-hook)"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+[ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
+[ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/marcelorisoli/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/marcelorisoli/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/marcelorisoli/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/marcelorisoli/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
