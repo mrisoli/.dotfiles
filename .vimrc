@@ -23,6 +23,8 @@ Plug 'diepm/vim-rest-console'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
 
+Plug 'jparise/vim-graphql'
+
 call plug#end()
 
 colorscheme nord
@@ -84,6 +86,7 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 " hi ALEWarning ctermbg=DarkGrey
 " hi ALEError ctermfg=DarkYellow ctermbg=DarkRed cterm=underline
+let g:ale_linters_explicit = 1
 
 ""--------
 "" ale
@@ -115,6 +118,10 @@ runtime macros/matchit.vim
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
 hi MatchParen cterm=bold ctermbg=white ctermfg=magenta
+
+" ctags
+nnoremap <leader>. :CtrlPTag<cr>
+
 ""--------
 "" Navigation
 ""--------
