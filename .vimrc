@@ -1,11 +1,10 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'editorconfig/editorconfig-vim'
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 
 Plug 'arcticicestudio/nord-vim'
-Plug 'chrisbra/Colorizer'
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -24,6 +23,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
 
 Plug 'jparise/vim-graphql'
+
+Plug 'elmcast/elm-vim'
 
 call plug#end()
 
@@ -69,6 +70,7 @@ set rtp+=~/.fzf
 ""--------
 let g:airline_theme='nord'
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 ""--------
 "" vim-airline/vim-airline
 ""--------
@@ -77,9 +79,9 @@ let g:airline#extensions#tabline#enabled = 1
 "" ale
 ""--------
 
-"set omnifunc=ale#completion#OmniFunc
-"let g:ale_completion_enabled = 1
-"let g:airline#extensions#ale#enabled = 1
+set omnifunc=ale#completion#OmniFunc
+let g:ale_completion_enabled = 1
+let g:airline#extensions#ale#enabled = 1
 
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
@@ -114,13 +116,19 @@ set directory=~/.vim/.tmp//      " where to put swap files.
 ""--------
 runtime macros/matchit.vim
 
-" project wide sed
+" file wide sed
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
 hi MatchParen cterm=bold ctermbg=white ctermfg=magenta
 
 " ctags
 nnoremap <leader>. :CtrlPTag<cr>
+
+" Auto generate tags file on file write of *.c and *.h files
+autocmd BufWritePost *.ts,*.js silent! !ctags . &
+
+" project search
+nnoremap <leader>g :Rg<cr>
 
 ""--------
 "" Navigation
@@ -157,3 +165,4 @@ autocmd FileType netrw set nolist
 ""--------
 "" netrw
 ""--------
+let g:Hexokinase_highlighters = [ 'backgroundfull' ]

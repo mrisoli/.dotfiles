@@ -19,6 +19,11 @@
         "haskell": {
         }
       }
+    },
+    "elmLS": {
+      "command": "elm-language-server",
+      "filetypes": ["elm"],
+      "rootPatterns": ["elm.json"]
     }
   },
   "tsserver.npm": "/usr/local/bin/npm"
