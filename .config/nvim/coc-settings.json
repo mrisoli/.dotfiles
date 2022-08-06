@@ -1,0 +1,34 @@
+{
+  "diagnostic.displayByAle": true,
+  "diagnostic.errorSign": " ",
+  "diagnostic.infoSign": " ",
+  "diagnostic.hintSign": "",
+  "diagnostic.warningSign": " ",
+  "languageserver": {
+    "haskell": {
+      "command": "hie-wrapper",
+      "args": ["--lsp"],
+      "rootPatterns": [
+        "*.cabal",
+        "stack.yaml",
+        "cabal.project",
+        "package.yaml"
+      ],
+      "filetypes": [
+        "hs",
+        "lhs",
+        "haskell"
+      ],
+      "initializationOptions": {
+        "haskell": {
+        }
+      }
+    },
+    "elmLS": {
+      "command": "elm-language-server",
+      "filetypes": ["elm"],
+      "rootPatterns": ["elm.json"]
+    }
+  },
+  "tsserver.npm": "/usr/local/bin/npm"
+}
