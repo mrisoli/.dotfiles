@@ -40,20 +40,20 @@ return require('packer').startup(function()
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
-  -- use 'chentoast/marks.nvim'
 
-  --[[
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
-    -- or                            , branch = '0.1.x',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
-  use({
-      'CosmicNvim/cosmic-ui',
-      requires = { 'MunifTanjim/nui.nvim', 'nvim-lua/plenary.nvim' },
-      config = function()
-        require('cosmic-ui').setup()
-      end,
-    })
-  ]]--
+
+  use {
+  "folke/trouble.nvim",
+  requires = "kyazdani42/nvim-web-devicons",
+  config = function()
+    require("trouble").setup {
+      auto_open = true,
+      auto_close = true
+    }
+  end
+  }
 end)
