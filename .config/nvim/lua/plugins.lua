@@ -13,7 +13,9 @@ return require('packer').startup(function()
   use 'tpope/vim-fugitive'
   use 'kylechui/nvim-surround'
 
-  use 'arcticicestudio/nord-vim'
+  -- use 'arcticicestudio/nord-vim'
+  use 'Mofiqul/dracula.nvim'
+
 
   use { 'junegunn/fzf', dir = '~/.fzf', run = './install --all' }
   use 'jremmen/vim-ripgrep'
@@ -56,4 +58,11 @@ return require('packer').startup(function()
     }
   end
   }
+
+  use 'norcalli/nvim-colorizer.lua'
+
+  use 'gennaro-tedesco/nvim-peekup'
+
+  use 'ggandor/leap.nvim'
+
 end)
