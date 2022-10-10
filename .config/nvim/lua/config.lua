@@ -5,7 +5,7 @@ vim.g.ale_sign_error = ' '
 vim.g.ale_sign_warning = '⚠ '
 vim.g.ale_fix_on_save = 1
 
-vim.cmd "colorscheme nord"
+vim.cmd "colorscheme dracula"
 
 vim.cmd "source ~/.config/nvim/coc.vim"
 
@@ -57,3 +57,7 @@ local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
 parser_config.tsx.filetype_to_parsename = { "javascript", "typescript.tsx" }
 
 require("nvim-surround").setup()
+
+require('colorizer').setup()
+
+require('leap').set_default_keymaps()
