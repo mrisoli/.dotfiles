@@ -9,12 +9,9 @@ vim.cmd "colorscheme dracula"
 
 vim.cmd "source ~/.config/nvim/coc.vim"
 
--- empty setup using defaults
-require("nvim-tree").setup()
-
--- OR setup with some options
 require("nvim-tree").setup({
   sort_by = "case_sensitive",
+  open_on_setup = true,
   view = {
     adaptive_size = true,
     mappings = {
@@ -60,4 +57,4 @@ require("nvim-surround").setup()
 
 require('colorizer').setup()
 
-require('leap').set_default_keymaps()
+require('leap')
