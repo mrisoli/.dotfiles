@@ -9,7 +9,6 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
   use 'editorconfig/editorconfig-vim'
-  -- use 'tpope/vim-surround'
   use 'tpope/vim-fugitive'
   use 'kylechui/nvim-surround'
 
@@ -21,11 +20,9 @@ return require('packer').startup(function()
   use 'jremmen/vim-ripgrep'
   use 'kien/ctrlp.vim'
 
-  use 'sheerun/vim-polyglot'
+  -- use 'sheerun/vim-polyglot'
 
   use 'wakatime/vim-wakatime'
-
-  -- use 'diepm/vim-rest-console'
 
   use {'neoclide/coc.nvim', branch = 'release'}
   use 'dense-analysis/ale'
@@ -49,14 +46,14 @@ return require('packer').startup(function()
   }
 
   use {
-  "folke/trouble.nvim",
-  requires = "kyazdani42/nvim-web-devicons",
-  config = function()
-    require("trouble").setup {
-      auto_open = true,
-      auto_close = true
-    }
-  end
+    "folke/trouble.nvim",
+    requires = "kyazdani42/nvim-web-devicons",
+    config = function()
+      require("trouble").setup {
+        auto_open = true,
+        auto_close = true,
+      }
+    end
   }
 
   use 'norcalli/nvim-colorizer.lua'

@@ -12,8 +12,8 @@ vim.opt.hlsearch = true
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.smarttab = true
-vim.opt.backupdir = "/Users/marcelorisoli/.config/nvim/.backup"
-vim.opt.directory = "/Users/marcelorisoli/.config/nvim/.tmp"
+vim.opt.backupdir = os.getenv("HOME") .. "/.config/nvim/.backup"
+vim.opt.directory = os.getenv("HOME") .. "/.config/nvim/.tmp"
 vim.opt.omnifunc = "ale#completion#OmniFunc"
 vim.opt.termguicolors = true
 

@@ -6,7 +6,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="k-nw"
+ZSH_THEME="dracula"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -14,7 +14,7 @@ ZSH_THEME="k-nw"
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
 
-plugins=(git)
+plugins=(asdf git)
 
 export LC_ALL=en_US.UTF-8
 
@@ -70,12 +70,10 @@ export PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export PATH="/Users/marcelorisoli/local/bin:$PATH"
 
+export TERM=alacritty
+
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 eval $(thefuck --alias F)
 eval "$(fasd --init posix-alias zsh-hook)"
@@ -83,9 +81,3 @@ eval "$(fasd --init posix-alias zsh-hook)"
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 [ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
 [ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/marcelorisoli/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/marcelorisoli/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/marcelorisoli/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/marcelorisoli/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
