@@ -1,0 +1,38 @@
+# Colors (Nord)
+import:
+  - ~/.config/alacritty/dracula.yml
+# Font configuration (changes require restart)
+font:
+  # The size to use.
+  size: 16
+  # The normal (roman) font face to use.
+  normal:
+    family: JetBrainsMonoMedium Nerd Font
+    # Style can be specified to pick a specific face.
+  style: Regular
+
+  # The bold font face
+  bold:
+    family: JetBrainsMonoMedium Nerd Font
+    # Style can be specified to pick a specific face.
+  style: Semibold
+
+  # The italic font face
+  italic:
+    family: JetBrainsMonoMedium Nerd Font
+    # Style can be specified to pick a specific face.
+  style: Oblique
+
+  glyph_offset:
+    x: 0
+    y: 0
+
+env:
+  TERM: xterm-256color
+
+shell:
+  program: /bin/zsh
+  args:
+    - -l
+    - -c
+    - "tmux attach || tmux"
