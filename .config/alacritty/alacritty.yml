@@ -1,6 +1,6 @@
-# Colors (Nord)
+# Colors (catppuccin)
 import:
-  - ~/.config/alacritty/dracula.yml
+  - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
 # Font configuration (changes require restart)
 font:
   # The size to use.
@@ -29,7 +29,6 @@ font:
 
 env:
   TERM: xterm-256color
-
 shell:
   program: /bin/zsh
   args:

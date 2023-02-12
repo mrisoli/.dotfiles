@@ -14,7 +14,7 @@ ZSH_THEME="dracula"
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
 
-plugins=(asdf git)
+plugins=(asdf git poetry)
 
 export LC_ALL=en_US.UTF-8
 
@@ -70,7 +70,7 @@ export PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export PATH="/Users/marcelorisoli/local/bin:$PATH"
 
-export TERM=alacritty
+#export TERM=alacritty
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
@@ -78,6 +78,19 @@ export PATH=$PATH:$GOPATH/bin
 eval $(thefuck --alias F)
 eval "$(fasd --init posix-alias zsh-hook)"
 
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 [ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
 [ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
+
+# pnpm
+export PNPM_HOME="/Users/marcelorisoli/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
+# bun completions
+[ -s "/Users/marcelorisoli/.bun/_bun" ] && source "/Users/marcelorisoli/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
