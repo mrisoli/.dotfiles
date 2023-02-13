@@ -1,5 +1,3 @@
-local fn = vim.fn
-
 require("lazy").setup({
 
   'github/copilot.vim',
