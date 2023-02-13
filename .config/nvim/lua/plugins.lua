@@ -21,10 +21,7 @@ require("lazy").setup({
   'kyazdani42/nvim-tree.lua',
   'simrat39/symbols-outline.nvim',
 
-  {
-    'nvim-lualine/lualine.nvim',
-    dependencies = { 'nvim-tree/nvim-web-devicons', lazy = true }
-  },
+  'feline-nvim/feline.nvim',
 
   { 'ibhagwan/fzf-lua', dependencies = 'nvim-tree/nvim-web-devicons'},
 

@@ -71,9 +71,13 @@ require('colorizer').setup()
 
 require('leap')
 
-require('lualine').setup{
-  options = { theme = "catppuccin" }
-}
+local ctp_feline = require('catppuccin.groups.integrations.feline')
+
+ctp_feline.setup({})
+
+require("feline").setup({
+    components = ctp_feline.get(),
+})
 
 require("symbols-outline").setup()
 vim.g.symbols_outline = {
