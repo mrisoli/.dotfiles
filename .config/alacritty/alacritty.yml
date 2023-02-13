@@ -1,4 +1,3 @@
-# Colors (catppuccin)
 import:
   - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
 # Font configuration (changes require restart)
@@ -29,6 +28,8 @@ font:
 
 env:
   TERM: xterm-256color
+
+
 shell:
   program: /bin/zsh
   args:

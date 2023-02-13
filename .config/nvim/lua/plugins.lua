@@ -11,7 +11,6 @@ require("lazy").setup({
   { "catppuccin/nvim", name = "catppuccin" },
 
 
-  { 'junegunn/fzf', dir = '~/.fzf', build = './install --all' },
   'jremmen/vim-ripgrep',
   'kien/ctrlp.vim',
 
@@ -28,6 +27,8 @@ require("lazy").setup({
     'nvim-lualine/lualine.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons', lazy = true }
   },
+
+  { 'ibhagwan/fzf-lua', dependencies = 'nvim-tree/nvim-web-devicons'},
 
   'neovim/nvim-lspconfig',
   'hrsh7th/nvim-cmp',

@@ -10,3 +10,6 @@ vim.keymap.set('n', 'fb', builtin.buffers, {})
 
 vim.keymap.set('n', '-', '<Plug>(leap-forward)', {})
 vim.keymap.set('n', '_', '<Plug>(leap-backward)', {})
+
+vim.api.nvim_set_keymap('n', '<C-f>', "<cmd>lua require('fzf-lua').files()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-d>', "<cmd>lua require('fzf-lua').grep_cword()<CR>", { noremap = true, silent = true })
