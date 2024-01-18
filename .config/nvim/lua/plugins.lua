@@ -1,65 +1,63 @@
-local fn = vim.fn
-local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-if fn.empty(fn.glob(install_path)) > 0 then
-  packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
-end
+require("lazy").setup({
 
-vim.cmd [[packadd packer.nvim]]
+	"github/copilot.vim",
+	"editorconfig/editorconfig-vim",
+	"tpope/vim-fugitive",
+	"ggandor/leap.nvim",
 
-return require('packer').startup(function()
-  use 'wbthomason/packer.nvim'
-  use 'editorconfig/editorconfig-vim'
-  use 'tpope/vim-fugitive'
-  use 'kylechui/nvim-surround'
+	"gennaro-tedesco/nvim-peekup",
+	"kyazdani42/nvim-tree.lua",
+	"simrat39/symbols-outline.nvim",
+	"nvim-tree/nvim-web-devicons",
 
-  -- use 'arcticicestudio/nord-vim'
-  use 'Mofiqul/dracula.nvim'
+	"jremmen/vim-ripgrep",
 
+	{
+		"kylechui/nvim-surround",
+		event = "VeryLazy",
+		config = function()
+			require("nvim-surround").setup()
+		end,
+	},
+	{
+		"norcalli/nvim-colorizer.lua",
+		config = function()
+			require("colorizer").setup()
+		end,
+	},
 
-  use { 'junegunn/fzf', dir = '~/.fzf', run = './install --all' }
-  use 'jremmen/vim-ripgrep'
-  use 'kien/ctrlp.vim'
+	{ "dracula/vim", name = "dracula" },
+	"lunarvim/synthwave84.nvim",
 
-  -- use 'sheerun/vim-polyglot'
+	{
+		"nvim-lualine/lualine.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons", opt = true },
+	},
 
-  use 'wakatime/vim-wakatime'
+	"neovim/nvim-lspconfig",
+	"hrsh7th/nvim-cmp",
+	"hrsh7th/cmp-nvim-lsp",
+	"hrsh7th/vim-vsnip",
+	{
+		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate",
+	},
 
-  use {'neoclide/coc.nvim', branch = 'release'}
-  use 'dense-analysis/ale'
+	"nvimtools/none-ls.nvim",
 
-  use 'kyazdani42/nvim-web-devicons'
-  use 'kyazdani42/nvim-tree.lua'
-  use 'simrat39/symbols-outline.nvim'
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
+	{
+		"nvim-telescope/telescope.nvim",
+		dependencies = { { "nvim-lua/plenary.nvim" } },
+	},
 
-  use {
-    'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate'
-  }
-
-  use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.0',
-    requires = { {'nvim-lua/plenary.nvim'} }
-  }
-
-  use {
-    "folke/trouble.nvim",
-    requires = "kyazdani42/nvim-web-devicons",
-    config = function()
-      require("trouble").setup {
-        auto_open = true,
-        auto_close = true,
-      }
-    end
-  }
-
-  use 'norcalli/nvim-colorizer.lua'
-
-  use 'gennaro-tedesco/nvim-peekup'
-
-  use 'ggandor/leap.nvim'
-
-end)
+	{
+		"folke/trouble.nvim",
+		dependencies = "nvim-tree/nvim-web-devicons",
+		config = function()
+			require("trouble").setup({
+				auto_open = true,
+				auto_close = true,
+			})
+		end,
+	},
+})

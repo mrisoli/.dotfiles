@@ -1,4 +1,3 @@
-# Colors (Nord)
 import:
   - ~/.config/alacritty/dracula.yml
 # Font configuration (changes require restart)
@@ -7,21 +6,21 @@ font:
   size: 16
   # The normal (roman) font face to use.
   normal:
-    family: JetBrainsMonoMedium Nerd Font
+    family: MonaspiceAr NF
     # Style can be specified to pick a specific face.
-  style: Regular
+    style: Regular
 
   # The bold font face
   bold:
-    family: JetBrainsMonoMedium Nerd Font
+    family: MonaspiceAr NF
     # Style can be specified to pick a specific face.
-  style: Semibold
+    style: Bold
 
   # The italic font face
   italic:
-    family: JetBrainsMonoMedium Nerd Font
+    family: MonaspiceAr NF
     # Style can be specified to pick a specific face.
-  style: Oblique
+    style: Medium Italic
 
   glyph_offset:
     x: 0

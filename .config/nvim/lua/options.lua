@@ -14,8 +14,6 @@ vim.opt.smartindent = true
 vim.opt.smarttab = true
 vim.opt.backupdir = os.getenv("HOME") .. "/.config/nvim/.backup"
 vim.opt.directory = os.getenv("HOME") .. "/.config/nvim/.tmp"
-vim.opt.omnifunc = "ale#completion#OmniFunc"
 vim.opt.termguicolors = true
 
 vim.api.nvim_create_autocmd({ 'BufWritePre' }, { command = '%s/\\s\\+$//e' })
--- vim.api.nvim_create_autocmd({ 'BufWritePost' }, { pattern = '*.ts,*.js', command = '!ctags . &<CR>' })
