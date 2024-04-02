@@ -42,7 +42,12 @@ require("lazy").setup({
     build = ":TSUpdate",
   },
 
-  "nvimtools/none-ls.nvim",
+  {
+    "nvimtools/none-ls.nvim",
+    dependencies = {
+      "nvimtools/none-ls-extras.nvim",
+    },
+  },
 
   {
     "nvim-telescope/telescope.nvim",
