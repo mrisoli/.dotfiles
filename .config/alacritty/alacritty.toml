@@ -1,0 +1,27 @@
+import = ["/Users/marcelorisoli/.config/alacritty/dracula.toml"]
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 16
+
+[font.bold]
+family = "MonaspiceAr NF"
+style = "Bold"
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.italic]
+family = "MonaspiceAr NF"
+style = "Medium Italic"
+
+[font.normal]
+family = "MonaspiceAr NF"
+style = "Regular"
+
+[shell]
+args = ["-l", "-c", "tmux attach || tmux"]
+program = "/bin/zsh"

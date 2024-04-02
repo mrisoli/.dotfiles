@@ -1,5 +1,8 @@
 # contains private keys and local aliases
-source ~/.zshenv
+# contains local files
+for file in ~/.zsh/*.sh; do
+    source "$file"
+done
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 

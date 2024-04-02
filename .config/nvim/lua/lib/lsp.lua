@@ -64,9 +64,19 @@ local on_attach = function(client, bufnr)
 		vim.lsp.buf.format({ async = true })
 	end, bufopts)
 end
+
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
--- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
+
 lspconfig.tsserver.setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
+})
+
+lspconfig.eslint.setup({
+  on_attach = function(client, bufnr)
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      buffer = bufnr,
+      command = "EslintFixAll",
+    })
+  end,
 })
