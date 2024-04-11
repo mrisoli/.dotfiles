@@ -1,8 +1,0 @@
-require("lib.symbols-outline")
-require("lib.lualine")
-require("lib.nvim-treesitter")
-require("lib.nvim-tree")
-require("lib.lsp")
-require("lib.telescope")
-require("lib.leap")
-require("lib.none-ls")
