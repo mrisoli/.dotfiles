@@ -2,7 +2,7 @@
 	email = celorisoli@gmail.com
 	name = Marcelo Risoli
 [core]
-	editor = vim
+	editor = nvim
 [init]
 	defaultBranch = main
 [pull]
