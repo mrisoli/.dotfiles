@@ -1,6 +1,6 @@
 # contains private keys and local aliases
 # contains local files
-for file in ~/.zsh/*.sh; do
+for file in .zsh/*.sh; do
     source "$file"
 done
 # If you come from bash you might have to change your $PATH.
