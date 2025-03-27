@@ -17,9 +17,8 @@ ZSH_THEME="dracula"
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
 
-plugins=(asdf git poetry)
+plugins=(asdf git)
 
-export LC_ALL=en_US.UTF-8
 
 bindkey -v
 
@@ -31,14 +30,17 @@ source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
-export EDITOR='vim'
+export EDITOR='nvim'
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
 #   export EDITOR='mvim'
 # fi
+
+export TERM='xterm-ghostty'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -72,8 +74,6 @@ export PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig
 
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export PATH="/Users/marcelorisoli/local/bin:$PATH"
-
-#export TERM=alacritty
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
