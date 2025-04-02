@@ -1,6 +1,6 @@
 # contains private keys and local aliases
 # contains local files
-for file in .zsh/*.sh; do
+for file in $HOME/.zsh/*.sh; do
     source "$file"
 done
 # If you come from bash you might have to change your $PATH.
@@ -40,7 +40,7 @@ export EDITOR='nvim'
 #   export EDITOR='mvim'
 # fi
 
-export TERM='xterm-ghostty'
+export TERM='xterm-256color'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
