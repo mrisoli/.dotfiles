@@ -99,3 +99,4 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 [ -f "/Users/marcelo.risoli/.ghcup/env" ] && source "/Users/marcelo.risoli/.ghcup/env" # ghcup-env
+eval "$(~/.local/bin/mise activate zsh)"
