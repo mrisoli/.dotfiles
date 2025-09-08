@@ -3,7 +3,6 @@ theme = Dracula
 font-family = Google Sans Code
 font-size = 16
 
-keybind = ctrl+n=new_tab
 
 keybind = ctrl+h=goto_split:left
 keybind = ctrl+j=goto_split:bottom
@@ -22,3 +21,4 @@ keybind = ctrl+a>p=previous_tab
 keybind = super+r=reload_config
 
 window-save-state = always
+keybind = shift+enter=text:\n
