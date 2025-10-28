@@ -1,8 +1,9 @@
 shell-integration = zsh
-theme = Dracula
-font-family = Google Sans Code
+theme = Rose Pine Moon
+font-family = MonaspiceAr Nerd Font Mono
 font-size = 16
 
+macos-icon=xray
 
 keybind = ctrl+h=goto_split:left
 keybind = ctrl+j=goto_split:bottom
@@ -21,4 +22,4 @@ keybind = ctrl+a>p=previous_tab
 keybind = super+r=reload_config
 
 window-save-state = always
-keybind = shift+enter=text:\n
+keybind = shift+enter=text:\n,

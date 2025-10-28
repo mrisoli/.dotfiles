@@ -17,7 +17,7 @@ ZSH_THEME="dracula"
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
 
-plugins=(asdf git)
+plugins=(git)
 
 
 bindkey -v
@@ -65,7 +65,8 @@ alias v='f -e vim' # quick opening files with vim
 alias n='nvim'
 
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
 
 export FZF_DEFAULT_COMMAND="rg --files --hidden"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
@@ -77,11 +78,6 @@ export PATH="/Users/marcelorisoli/local/bin:$PATH"
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
-
-eval $(thefuck --alias F)
-eval "$(fasd --init posix-alias zsh-hook)"
-
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 [ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
