@@ -1,6 +1,6 @@
 # contains private keys and local aliases
 # contains local files
-for file in $HOME/.zsh/*.sh; do
+for file in $HOME/.zsh/**/*.sh; do
     source "$file"
 done
 # If you come from bash you might have to change your $PATH.
@@ -94,6 +94,9 @@ export PATH="$PNPM_HOME:$PATH"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-[ -f "/Users/marcelo.risoli/.ghcup/env" ] && source "/Users/marcelo.risoli/.ghcup/env" # ghcup-env
 eval "$(~/.local/bin/mise activate zsh)"
 export PATH="$HOME/.local/bin:$PATH"
+
+[ -f "/Users/marcelo.risoli/.ghcup/env" ] && . "/Users/marcelo.risoli/.ghcup/env" # ghcup-env
+# Added by Antigravity
+export PATH="/Users/marcelo.risoli/.antigravity/antigravity/bin:$PATH"

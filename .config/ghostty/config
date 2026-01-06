@@ -1,6 +1,6 @@
 shell-integration = zsh
 theme = Rose Pine Moon
-font-family = MonaspiceAr Nerd Font Mono
+font-family = JetBrainsMono Nerd Font
 font-size = 16
 
 macos-icon=xray
