@@ -83,10 +83,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 [ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
 [ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
 
-# pnpm
-export PNPM_HOME="/Users/marcelorisoli/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-# pnpm end
 # bun completions
 [ -s "/Users/marcelorisoli/.bun/_bun" ] && source "/Users/marcelorisoli/.bun/_bun"
 
