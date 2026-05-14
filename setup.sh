@@ -7,8 +7,6 @@ DOTFILES="$(cd "$(dirname "$0")" && pwd)"
 
 read -rp "Org name (GitHub org for work repos): " ORG
 read -rp "Work email for $ORG: " ORG_EMAIL
-read -rp "Personal name [Marcelo Risoli]: " NAME
-NAME="${NAME:-Marcelo Risoli}"
 read -rp "SSH signing key path [~/.ssh/id_ed25519]: " SSH_KEY
 SSH_KEY="${SSH_KEY:-~/.ssh/id_ed25519}"
 
@@ -22,7 +20,6 @@ echo "created ~/workspace/mrisoli and ~/workspace/$ORG"
 
 sed \
   -e "s|{{ORG}}|$ORG|g" \
-  -e "s|{{NAME}}|$NAME|g" \
   -e "s|{{SSH_KEY_PATH}}|$SSH_KEY|g" \
   "$DOTFILES/.gitconfig.template" > ~/.gitconfig
 echo "created ~/.gitconfig"
@@ -30,7 +27,6 @@ echo "created ~/.gitconfig"
 cat > ~/.gitconfig-"$ORG" <<EOF
 [user]
 	email = $ORG_EMAIL
-	name = $NAME
 EOF
 echo "created ~/.gitconfig-$ORG"
 
