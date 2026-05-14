@@ -96,3 +96,6 @@ export PATH="$HOME/.local/bin:$PATH"
 [ -f "/Users/marcelo.risoli/.ghcup/env" ] && . "/Users/marcelo.risoli/.ghcup/env" # ghcup-env
 # Added by Antigravity
 export PATH="/Users/marcelo.risoli/.antigravity/antigravity/bin:$PATH"
+
+# opencode
+export PATH=/Users/mrisoli/.opencode/bin:$PATH
