@@ -1,0 +1,20 @@
+[user]
+	email = {{DEFAULT_EMAIL}}
+	name = {{NAME}}
+	signingkey = {{SSH_KEY_PATH}}
+[includeIf "hasconfig:remote.*.url:git@github.com:{{ORG}}*"]
+	path = ~/.gitconfig-{{ORG}}
+[includeIf "hasconfig:remote.*.url:https://github.com/{{ORG}}*"]
+	path = ~/.gitconfig-{{ORG}}
+[core]
+	editor = nvim
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false
+[push]
+	autoSetupRemote = true
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
