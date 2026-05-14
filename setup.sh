@@ -6,7 +6,8 @@ DOTFILES="$(cd "$(dirname "$0")" && pwd)"
 # --- Collect setup info ---
 
 read -rp "Org name (GitHub org for work repos): " ORG
-read -rp "Work email for $ORG: " ORG_EMAIL
+read -rp "Work email for $ORG [marcelo.risoli@$ORG]: " ORG_EMAIL
+ORG_EMAIL="${ORG_EMAIL:-marcelo.risoli@$ORG}"
 read -rp "Personal name [Marcelo Risoli]: " NAME
 NAME="${NAME:-Marcelo Risoli}"
 read -rp "Personal email [celorisoli@gmail.com]: " PERSONAL_EMAIL
