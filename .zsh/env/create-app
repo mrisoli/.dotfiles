@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Create a new app scaffolded with better-t-stack.
+# Usage: ./create-app.sh [project-name]
+# If no project name is supplied, you will be prompted for one.
+
+project_name="${1:-}"
+
+if [[ -z "$project_name" ]]; then
+  read -r -p "Project name: " project_name
+fi
+
+if [[ -z "$project_name" ]]; then
+  echo "Error: project name is required." >&2
+  exit 1
+fi
+
+bun create better-t-stack@latest "$project_name" \
+  --frontend tanstack-start \
+  --backend convex \
+  --runtime none \
+  --api none \
+  --auth better-auth \
+  --payments none \
+  --database none \
+  --orm none \
+  --db-setup none \
+  --package-manager bun \
+  --git \
+  --web-deploy none \
+  --server-deploy none \
+  --install \
+  --addons mcp skills turborepo ultracite \
+  --examples none
