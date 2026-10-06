@@ -1,8 +1,22 @@
 [tools]
+aws-cli = "latest"
+elixir = "latest"
+erlang = "latest"
+fd = "latest"
+fzf = "latest"
+gh = "latest"
 go = "latest"
 lua = "latest"
+neovim = "latest"
 node = "latest"
+pnpm = "latest"
+poetry = "latest"
 python = "latest"
+ripgrep = "latest"
+ruby = "latest"
+rust = "latest"
+tree-sitter = "latest"
+uv = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["ruby"]

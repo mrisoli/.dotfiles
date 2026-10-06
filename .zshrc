@@ -5,6 +5,7 @@ for file in $HOME/.zsh/**/*.sh; do
 done
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="$HOME/.local/share/mise/shims:$PATH"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -99,3 +100,11 @@ export PATH="/Users/marcelo.risoli/.antigravity/antigravity/bin:$PATH"
 
 # opencode
 export PATH=/Users/mrisoli/.opencode/bin:$PATH
+
+# pnpm
+export PNPM_HOME="/Users/mrisoli/.pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
+# pnpm end
